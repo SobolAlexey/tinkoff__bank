@@ -1,7 +1,7 @@
 import { onAuthStateChanged, User } from 'firebase/auth'
 import React, { createContext, useState, useMemo, useEffect, FC } from 'react'
 import { Alert } from 'react-native'
-import { auth, db, login, logout, register } from '../firebase'
+import { auth, db, login, logout, register } from '../firebase/firebase'
 import { addDoc, collection } from "@firebase/firestore"
 
 
