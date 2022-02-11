@@ -4,6 +4,7 @@ import { styleCenter } from "../../layout/Layout";
 import tw from "tailwind-react-native-classnames";
 import { useAuth } from "../../../hooks/useAuth";
 import Field from "../../ui/Field";
+import Button from "../../ui/Button";
 
 interface IData {
   email: string;
@@ -14,7 +15,9 @@ const Auth: FC = () => {
   const { isLoading } = useAuth();
   const [data, setData] = useState<IData>({} as IData);
   const [isReg, setIsReg] = useState(false);
+  const authHangler = () => {
 
+  }
   return (
     <View style={styleCenter}>
       <View style={tw`mx-5 justify-center items-center h-full`}>
@@ -34,6 +37,10 @@ const Auth: FC = () => {
           placeholder='Enter password'
           onChange={val => setData({ ...data, password: val})}
           isSecure={true}
+          />
+          <Button
+          onPress={authHangler}
+          title={'Lets go'}
           />
         </View>
       </View>
